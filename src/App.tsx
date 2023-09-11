@@ -4,9 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { globalSelectors } from '@/Redux/Global/selectors';
 import { LoaderSpinner } from '@/Components/LoaderSpinner/LoaderSpinner';
 import { PagesRouting } from '@/Routing';
-import { Header } from '@/Components/Header/Header';
-import { Navbar } from '@/Components/Navbar/Navbar';
-import { Footer } from '@/Components/Footer/Footer';
+import { MainPage } from '@/Pages/Main/MainPage.async';
 
 function App() {
     const isLoading = useSelector(globalSelectors.isLoading);
@@ -17,9 +15,7 @@ function App() {
 
             <Switch>
                 <Route exact path={PagesRouting.MainPages.MainPage}>
-                    <Header />
-                    <Navbar />
-                    <Footer />
+                    <MainPage />
                 </Route>
             </Switch>
         </Suspense>

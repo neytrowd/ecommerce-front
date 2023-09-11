@@ -6,7 +6,7 @@ import cn from 'classnames';
 import { ClassNameProps } from '@/Types';
 
 // Styles import
-import styles from './LoaderSpinner.scss';
+import styles from './LoaderSpinner.module.scss';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 type Props = {
