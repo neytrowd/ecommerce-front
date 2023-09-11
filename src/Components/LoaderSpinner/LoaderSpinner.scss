@@ -1,0 +1,22 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000000;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 70%);
+
+    &.root {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.loaderMessage {
+    margin-left: 10px;
+}
