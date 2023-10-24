@@ -1,6 +1,8 @@
 ﻿export class PagesRouting {
     public static MainPages = {
         MainPage: '/',
+        ShopPage: '/shop',
+        ShopDetail: '/shop/:id',
         PermissionDenied: '/permission-denied',
     };
 

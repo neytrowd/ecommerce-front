@@ -16,6 +16,8 @@ import Offer1 from './Images/offer-1.jpg';
 import Offer2 from './Images/offer-2.jpg';
 
 import Carousel1 from './Images/carousel-1.jpg';
+import Carousel2 from './Images/carousel-2.jpg';
+import Carousel3 from './Images/carousel-3.jpg';
 
 export const Images = {
     Category1,
@@ -36,4 +38,6 @@ export const Images = {
     Offer2,
 
     Carousel1,
+    Carousel2,
+    Carousel3,
 };

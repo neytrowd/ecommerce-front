@@ -1,5 +1,4 @@
 ﻿export type ErrorDetail = {
-  errorCode: string;
-  errorMessage?: string;
-  localizationParams?: string[];
+   errorCode: string;
+   errorMessage?: string;
 };
