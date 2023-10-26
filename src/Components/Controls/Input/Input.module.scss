@@ -1,0 +1,7 @@
+.input {
+   &:read-only,
+   &:disabled {
+      color: #000;
+      background: #ececec;
+   }
+}

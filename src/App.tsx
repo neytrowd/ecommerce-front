@@ -7,6 +7,9 @@ import { PagesRouting } from '@/Routing';
 import { MainPage } from '@/Pages/Main/MainPage.async';
 import { ShopPage } from '@/Pages/Shop/ShopPage.async';
 import { ShopDetailPage } from '@/Pages/ShopDetail/ShopDetailPage.async';
+import { CartPage } from '@/Pages/Cart/CartPage.async';
+import { CheckoutPage } from '@/Pages/Checkout/CheckoutPage.async';
+import { ContactPage } from '@/Pages/Contact/ContactPage.async';
 
 function App() {
     const isLoading = useSelector(globalSelectors.isLoading);
@@ -24,6 +27,15 @@ function App() {
                 </Route>
                 <Route exact path={PagesRouting.MainPages.ShopDetail}>
                     <ShopDetailPage />
+                </Route>
+                <Route exact path={PagesRouting.MainPages.Cart}>
+                    <CartPage />
+                </Route>
+                <Route exact path={PagesRouting.MainPages.Checkout}>
+                    <CheckoutPage />
+                </Route>
+                <Route exact path={PagesRouting.MainPages.Contact}>
+                    <ContactPage />
                 </Route>
             </Switch>
         </Suspense>

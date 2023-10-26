@@ -3,6 +3,9 @@
         MainPage: '/',
         ShopPage: '/shop',
         ShopDetail: '/shop/:id',
+        Cart: '/cart',
+        Checkout: '/checkout',
+        Contact: '/contact',
         PermissionDenied: '/permission-denied',
     };
 
