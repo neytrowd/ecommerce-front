@@ -27,8 +27,6 @@ export function SelectInput<TPair extends string | number>({
       }
    }, [value, placeholder, options]);
 
-   console.log(placeholder);
-
    return (
       <select
          disabled={disabled}

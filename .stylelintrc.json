@@ -3,6 +3,7 @@
     "rules": {
         "indentation": [3],
         "selector-class-pattern": null,
-        "scss/at-import-partial-extension": null
+        "scss/at-import-partial-extension": null,
+        "selector-pseudo-class-no-unknown": null
     }
 }

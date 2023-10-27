@@ -1,4 +1,7 @@
-.elementWrapper {
-   display: flex;
-   width: 100%;
+.overlay {
+   :global {
+      .rc-tooltip-arrow {
+         bottom: 4px !important;
+      }
+   }
 }

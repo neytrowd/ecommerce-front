@@ -1,0 +1,40 @@
+﻿.modal {
+   position: absolute;
+   padding: 30px 20px 15px;
+   background-color: white;
+   box-shadow: 0 4px 34px 0 rgb(0 0 0 / 24%);
+   outline: none;
+}
+
+:global {
+   .ReactModal__Overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+   }
+
+   .ReactModal__Overlay--after-open {
+      z-index: 999;
+   }
+}
+
+.modalButtons {
+   position: absolute;
+   right: 12px;
+   top: 12px;
+   display: flex;
+
+   .modalButton {
+      margin-left: 7px;
+   }
+}
+
+.modalTitle {
+   margin-top: 0;
+   padding-left: 25px;
+}

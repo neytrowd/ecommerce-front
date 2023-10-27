@@ -10,36 +10,46 @@ import { ShopDetailPage } from '@/Pages/ShopDetail/ShopDetailPage.async';
 import { CartPage } from '@/Pages/Cart/CartPage.async';
 import { CheckoutPage } from '@/Pages/Checkout/CheckoutPage.async';
 import { ContactPage } from '@/Pages/Contact/ContactPage.async';
+import { SignInPage, SignUpPage } from '@/Pages/Authorization';
 
 function App() {
-    const isLoading = useSelector(globalSelectors.isLoading);
+   const isLoading = useSelector(globalSelectors.isLoading);
 
-    return (
-        <Suspense fallback={<LoaderSpinner type="Oval" visible />}>
-            {isLoading && <LoaderSpinner type="Oval" visible />}
+   return (
+      <Suspense fallback={<LoaderSpinner type="Oval" visible />}>
+         {isLoading && <LoaderSpinner type="Oval" visible />}
 
-            <Switch>
-                <Route exact path={PagesRouting.MainPages.MainPage}>
-                    <MainPage />
-                </Route>
-                <Route exact path={PagesRouting.MainPages.ShopPage}>
-                    <ShopPage />
-                </Route>
-                <Route exact path={PagesRouting.MainPages.ShopDetail}>
-                    <ShopDetailPage />
-                </Route>
-                <Route exact path={PagesRouting.MainPages.Cart}>
-                    <CartPage />
-                </Route>
-                <Route exact path={PagesRouting.MainPages.Checkout}>
-                    <CheckoutPage />
-                </Route>
-                <Route exact path={PagesRouting.MainPages.Contact}>
-                    <ContactPage />
-                </Route>
-            </Switch>
-        </Suspense>
-    );
+         <Switch>
+            {/* Authorization */}
+            <Route exact path={PagesRouting.AuthorizationPages.LoginPage}>
+               <SignInPage />
+            </Route>
+            <Route exact path={PagesRouting.AuthorizationPages.RegistrationPage}>
+               <SignUpPage />
+            </Route>
+
+            {/* Main pages */}
+            <Route exact path={PagesRouting.MainPages.MainPage}>
+               <MainPage />
+            </Route>
+            <Route exact path={PagesRouting.MainPages.ShopPage}>
+               <ShopPage />
+            </Route>
+            <Route exact path={PagesRouting.MainPages.ShopDetail}>
+               <ShopDetailPage />
+            </Route>
+            <Route exact path={PagesRouting.MainPages.Cart}>
+               <CartPage />
+            </Route>
+            <Route exact path={PagesRouting.MainPages.Checkout}>
+               <CheckoutPage />
+            </Route>
+            <Route exact path={PagesRouting.MainPages.Contact}>
+               <ContactPage />
+            </Route>
+         </Switch>
+      </Suspense>
+   );
 }
 
 export default App;

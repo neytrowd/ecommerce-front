@@ -19,25 +19,29 @@ import Carousel1 from './Images/carousel-1.jpg';
 import Carousel2 from './Images/carousel-2.jpg';
 import Carousel3 from './Images/carousel-3.jpg';
 
+import Payments from './Images/payments.png';
+
 export const Images = {
-    Category1,
-    Category2,
-    Category3,
-    Category4,
+   Category1,
+   Category2,
+   Category3,
+   Category4,
 
-    Product1,
-    Product2,
-    Product3,
-    Product4,
-    Product5,
-    Product6,
-    Product7,
-    Product8,
+   Product1,
+   Product2,
+   Product3,
+   Product4,
+   Product5,
+   Product6,
+   Product7,
+   Product8,
 
-    Offer1,
-    Offer2,
+   Offer1,
+   Offer2,
 
-    Carousel1,
-    Carousel2,
-    Carousel3,
+   Carousel1,
+   Carousel2,
+   Carousel3,
+
+   Payments,
 };

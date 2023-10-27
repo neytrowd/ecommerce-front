@@ -3,7 +3,7 @@ import { Link } from '@/Components/Controls/Link/Link';
 
 export function Header() {
    return (
-      <div className="container-fluid">
+      <header className="container-fluid">
          <div className="row bg-secondary py-1 px-xl-5">
             <div className="col-lg-12 text-center text-lg-right">
                <div className="d-inline-flex align-items-center">
@@ -52,6 +52,6 @@ export function Header() {
                <h5 className="m-0">+012 345 6789</h5>
             </div>
          </div>
-      </div>
+      </header>
    );
 }
