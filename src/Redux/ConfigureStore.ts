@@ -3,13 +3,13 @@ import { useDispatch } from 'react-redux';
 import { rootReducer } from './RootReducer';
 
 export const store = configureStore({
-    reducer: rootReducer,
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: false,
-            immutableCheck: false,
-        }),
+   reducer: rootReducer,
+   middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+         serializableCheck: false,
+         immutableCheck: false,
+      }),
 });
 
-type AppDispatch = typeof store.dispatch;
+export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = () => useDispatch<AppDispatch>();

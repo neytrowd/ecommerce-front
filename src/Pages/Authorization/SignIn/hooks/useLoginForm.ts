@@ -3,6 +3,8 @@ import { useCallback } from 'react';
 import { useRequired } from '@/Hooks/Validation/useRequired';
 import { useShouldBeEmail } from '@/Hooks/Validation/useShouldBeEmail';
 import { useShouldBePassword } from '@/Hooks/Validation/useShouldBePassword';
+import { useAppDispatch } from '@/Redux/ConfigureStore';
+import { userAsyncActions } from '@/Redux/User/asyncActions';
 
 export type FormData = {
    login: string;
@@ -11,6 +13,8 @@ export type FormData = {
 };
 
 export function useLoginForm() {
+   const dispatch = useAppDispatch();
+
    const {
       register,
       handleSubmit,
@@ -18,7 +22,12 @@ export function useLoginForm() {
    } = useForm<FormData>();
 
    const onSubmit = useCallback((formData: FormData) => {
-      console.log(formData);
+      dispatch(
+         userAsyncActions.login({
+            email: formData.login,
+            password: formData.password,
+         }),
+      );
    }, []);
 
    // Rules

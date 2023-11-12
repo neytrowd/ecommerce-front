@@ -8,14 +8,14 @@ import { globalHistory } from '@/GlobalHistory';
 import '@/Styles/index.scss';
 import App from './App';
 
-new ErrorHandler(store.getState);
 new LoadingHandler(store);
+new ErrorHandler(store.getState);
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Router history={globalHistory}>
-            <App />
-        </Router>
-    </Provider>,
-    document.getElementById('root'),
+   <Provider store={store}>
+      <Router history={globalHistory}>
+         <App />
+      </Router>
+   </Provider>,
+   document.getElementById('root'),
 );

@@ -15,7 +15,7 @@ const SignInPage = () => {
 
    return (
       <section className="vh-100">
-         <div className="container h-100">
+         <div className="container h-100 w-50">
             <div className="row h-100 d-flex flex-column justify-content-center align-items-center">
                <div className="w-50">
                   <form className="mt-4" onSubmit={onSubmit}>

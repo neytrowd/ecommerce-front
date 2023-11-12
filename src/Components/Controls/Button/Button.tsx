@@ -6,6 +6,8 @@ import cn from 'classnames';
 type Props = {
    onClick?: () => void;
    type?: 'button' | 'submit';
+   theme?: 'light' | 'outline-light' | 'primary' | 'outline-primary';
+   size?: 'small' | 'medium' | 'large';
    disabled?: boolean;
    notificationNumber?: number;
    showEmptyNotification?: boolean;
@@ -20,6 +22,8 @@ export const Button: React.FC<Props> = ({
    onClick,
    className,
    type = 'button',
+   theme = 'primary',
+   size = 'medium',
    dataAttributes,
    autoFocus,
    children,
@@ -30,9 +34,11 @@ export const Button: React.FC<Props> = ({
          type={type}
          disabled={disabled}
          autoFocus={autoFocus}
-         className={cn('btn btn-primary py-2 px-4', className, {
+         className={cn(`btn btn-${theme}`, className, {
             [styles.disabled]: disabled,
             ['btn-block']: fullWith,
+            ['btn-sm']: size == 'small',
+            ['btn-lg']: size == 'large',
          })}
          onClick={onClick}
          {...dataAttributes}

@@ -3,6 +3,8 @@ import { useCallback } from 'react';
 import { useRequired } from '@/Hooks/Validation/useRequired';
 import { useShouldBeEmail } from '@/Hooks/Validation/useShouldBeEmail';
 import { useShouldBePassword } from '@/Hooks/Validation/useShouldBePassword';
+import { useAppDispatch } from '@/Redux/ConfigureStore';
+import { userAsyncActions } from '@/Redux/User/asyncActions';
 
 export type FormData = {
    firstName: string;
@@ -14,6 +16,8 @@ export type FormData = {
 };
 
 export function useRegisterForm() {
+   const dispatch = useAppDispatch();
+
    const {
       register,
       handleSubmit,
@@ -22,7 +26,14 @@ export function useRegisterForm() {
    } = useForm<FormData>();
 
    const onSubmit = useCallback((formData: FormData) => {
-      console.log(formData);
+      dispatch(
+         userAsyncActions.register({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            password: formData.password,
+         }),
+      );
    }, []);
 
    // Rules
